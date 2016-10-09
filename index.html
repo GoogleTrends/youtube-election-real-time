@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+    <title></title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,500' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header-section">
+        <div class="trends-logo-container">
+          <div class="trends-logo">
+          </div>
+          <p class="trends-text"><a href="https://www.google.com/trends/story/election2016">Election 2016</a>
+          </p>
+        </div>
+        <p class="title-big">Clinton and Trump: Who Voters Are Watching on YouTube
+        </p>
+        <div class="settings">
+          <div class="filters-row">
+            <div class="title-sub first-sub">1. Select a Candidate to View<br> His or Her Popularity on <span class="sub-bolded">YouTube</span>
+            </div>
+            <p id="versus" class="filter-item front-curve" style="font-weight:500; background-color: #F5F5F5;color: black;box-shadow: inset 0 3px 5px rgba(0,0,0,.125);border-color: #adadad;">Clinton vs. Trump</p>
+            <p id="Trump" class="filter-item" style="">Trump</p>
+            <p id="Clinton" class="filter-item back-curve" style="">Clinton</p>
+          </div>
+
+          <div class="timeline">
+            <div class="title-sub second-sub">2. View <a class="all-dates-button">All Dates</a>or Select a Timeframe Below
+            </div>
+            <p class="timeline-button">&#9658;
+            </p>
+            <p class="timeline-button-annotation">PLAY
+            </p>
+            <p class="timeline-label timeline-start">Jan &lsquo;16</p>
+            <div class="timeline-line-wrapper">
+              <div class="view-spark">
+              </div>
+              <!-- <div class="timeline-annotations">
+                <div class="timeline-annotation iowa-annotation">
+                  <div class="timeline-line">
+                  </div>
+                  <p class="timeline-text">IOWA
+                  </p>
+                </div>
+                <div class="timeline-annotation super-annotation">
+                  <div class="timeline-line">
+                  </div>
+                  <p class="timeline-text">super tuesday
+                  </p>
+                </div>
+                <div class="timeline-annotation trump-annotation">
+                  <div class="timeline-line">
+                  </div>
+                  <p class="timeline-text">Trump Clinches
+                  </p>
+                </div>
+              </div> -->
+              <div class="spark-tool-tip">
+                <p class="spark-tool-tip-text">Hi there.
+                </p>
+                <div class="spark-tool-tip-line">
+                </div>
+
+              </div>
+              <div class="timeline-line-grey">
+              </div>
+              <div class="line-dates">
+                <p class="line-month">MAR</p>
+                <!-- <p class="line-month">JAN</p> -->
+                <p class="line-month">MAY</p>
+                <!-- <p class="line-month">MAR</p> -->
+                <p class="line-month">JUL</p>
+                <!-- <p class="line-month">MAY</p> -->
+                <p class="line-month">SEP</p>
+                <!-- <p class="line-month">JUL</p> -->
+              </div>
+              <div class="brush-svg-container">
+                <svg class="brush-svg" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                  <defs>
+                    <pattern id="circles-9" patternUnits="objectBoundingBox" width="56" height="9">
+                      <rect width="56" height="9" fill="white" x="0" y="0"></rect>
+                      <line x1="28" x2="28" y1="2" y2="7" stroke="#aaa"></line>
+                      <line x1="30" x2="30" y1="2" y2="7" stroke="#aaa"></line>
+                      <line x1="32" x2="32" y1="2" y2="7" stroke="#aaa"></line>
+                      <!-- <image xlink:href=" data:image/png;base64,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" x="0" y="0" width="79" height="9">
+                      </image> -->
+                    </pattern>
+                  </defs>
+                </svg>
+              </div>
+            </div>
+            <p class="timeline-label timeline-end">Oct &lsquo;16
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="chart-column-wrapper">
+        <div class="first-col">
+          <div class="col-title"><span class='bolded'><span class='candidate-name'>The Top Three</span></span><br>Most-Viewed Videos
+          </div>
+          <div class="pop-videos">
+          </div>
+          <div class="sources">
+            <div class="sources-title-row">
+              <div class="sources-logo">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="byline-svg" x="0px" y="0px" viewBox="15 0 85.3 65" enable-background="new 0 0 285.3 65" xml:space="preserve" style="width: 53px;height: 29px;">
+                  <g>
+                    <path id="red-box" fill="#E4251C" d="M109.9,23.4c0,0-0.6-4.4-2.5-6.3c-2.4-2.5-5.2-2.6-6.4-2.7c-9-0.6-22.4-0.6-22.4-0.6h0     c0,0-13.5,0-22.4,0.6c-1.3,0.1-4,0.2-6.4,2.7c-1.9,1.9-2.5,6.3-2.5,6.3s-0.6,5.2-0.6,10.3v4.8c0,5.2,0.6,10.3,0.6,10.3     s0.6,4.4,2.5,6.3c2.4,2.5,5.6,2.5,7.1,2.7c5.1,0.5,21.8,0.6,21.8,0.6s13.5,0,22.4-0.7c1.3-0.1,4-0.2,6.4-2.7     c1.9-1.9,2.5-6.3,2.5-6.3s0.6-5.2,0.6-10.3v-4.8C110.5,28.5,109.9,23.4,109.9,23.4z"></path>
+                    <path class="grey-letters" fill="#333333" d="M43.1,50H39v-2.4c-1.5,1.8-2.9,2.7-4.3,2.7c-1.3,0-2.1-0.6-2.6-1.7c-0.3-0.6-0.5-1.7-0.5-3.2     V28.3h4.1v16.1c0,0.9,0,1.3,0,1.5c0.1,0.6,0.4,0.8,0.9,0.8c0.8,0,1.5-0.7,2.4-1.9V28.3h4.1V50z"></path>
+                    <path class="grey-letters" id="" fill="#333333" d="M28.7,35.4c0-2.3-0.5-4.1-1.3-5.2c-1.1-1.5-2.8-2.1-4.5-2.1c-1.9,0-3.4,0.6-4.5,2.1     c-0.8,1.1-1.3,2.9-1.3,5.2l0,7.7c0,2.3,0.4,3.9,1.2,5c1.1,1.5,2.8,2.3,4.6,2.3s3.5-0.8,4.6-2.3c0.8-1.1,1.2-2.7,1.2-5V35.4z      M24.6,43.6c0.2,2.1-0.5,3.2-1.7,3.2s-1.9-1.1-1.7-3.2V35c-0.2-2.1,0.5-3.2,1.7-3.2c1.3,0,1.9,1,1.7,3.2L24.6,43.6z"></path>
+                    <path class="grey-letters" id="" fill="#333333" d="M12.6,38.2V50H8.3V38.2c0,0-4.5-14.5-5.4-17.2h4.5l3,11.3l3-11.3H18L12.6,38.2z"></path>
+                    <path class="white-letters" id="" fill="#FFFFFF" d="M105.2,39.9l0-4.4c0-2.3-0.5-4-1.3-5.1c-1.1-1.5-2.6-2.2-4.6-2.2c-2,0-3.5,0.8-4.7,2.2     c-0.8,1.1-1.3,2.9-1.3,5.2v7.5c0,2.3,0.5,3.9,1.4,5c1.1,1.5,2.7,2.2,4.7,2.2c2,0,3.6-0.8,4.7-2.3c0.5-0.7,0.8-1.5,0.9-2.3     c0-0.4,0.1-1.3,0.1-2.5v-0.6h-4.1c0,1.6,0,2.5,0,2.7c-0.2,1-0.8,1.6-1.7,1.6c-1.3,0-1.9-1-1.9-3v-3.9H105.2z M97.4,34.3     c0-2,0.6-2.6,1.8-2.6c1.3,0,1.8,0.6,1.8,2.6v2.3l-3.7,0V34.3z"></path>
+                    <path class="white-letters" id="" fill="#FFFFFF" d="M87.2,28.2c-1.4,0-2.9,0.9-4.1,2.4l0-9.4h-3.9V50H83l0-2.2c1.3,1.6,2.7,2.4,4.1,2.4     c1.5,0,2.7-0.8,3.2-2.4c0.3-0.9,0.4-2.3,0.4-4.3V35c0-2-0.3-3.4-0.5-4.3C89.7,29.1,88.7,28.2,87.2,28.2z M86.7,43.8     c0,2.1-0.5,3-1.6,3c-0.6,0-1.4-0.3-2-1l0-13c0.7-0.6,1.4-1,2-1c1.1,0,1.6,0.6,1.6,2.8V43.8z"></path>
+                    <path class="white-letters" id="" fill="#FFFFFF" d="M76,50h-4.1v-2.4c-1.5,1.8-2.9,2.7-4.3,2.7c-1.3,0-2.1-0.6-2.6-1.7c-0.3-0.6-0.5-1.7-0.5-3.2     v-17h4.1v15.9c0,0.9,0,1.3,0,1.5c0.1,0.6,0.4,0.8,0.9,0.8c0.8,0,1.5-0.7,2.4-1.9V28.5H76V50z"></path>
+                    <polygon class="white-letters" id="" fill="#FFFFFF" points="60.5,50 56.2,50 56.2,25.3 51.7,25.3 51.7,21.2 65.2,21.2 65.2,25.3 60.5,25.3    "></polygon>
+                  </g>
+                </svg>
+              </div>
+              <p class="sources-title">Channel Sources
+              </p>
+            </div>
+
+            <p class="source-items"><a target="_blank" href="https://www.youtube.com/channel/UCLRYsOHrkk5qcIhtq033bLQ">Hillary Clinton</a>, <a target="_blank" href="https://www.youtube.com/channel/UCZvm1vYbnVZ2th-qah_fIAw">Correct The Record (Clinton Super PAC)</a>, <a target="_blank" href="https://www.youtube.com/channel/UCS6scxofr3K4j5q7hn6xQmQ">Priorities USA (Clinton Super PAC)</a>
+            </p>
+            <p class="source-items"><a target="_blank" href="https://www.youtube.com/channel/UC9AKA0PYiGCSPqfCEMaKtag">Trump</a>, <a target="_blank" href="https://www.youtube.com/channel/UCAql2DyGU2un1Ei2nMYsqOA">Donald J. Trump for President</a>, <a target="_blank" href="https://www.youtube.com/channel/UCuTLdKRZEqIJafbfzpMoZVA">Committee for American Sovereignty (Trump Super PAC)</a>, <a target="_blank" href="https://www.youtube.com/channel/UCtPPkbvsXPyQaKdxf0Yp8Mg">Rebuilding America (Trump Super PAC)</a>, <a target="_blank" href="https://www.youtube.com/channel/UCbj-hBGeO12TH22V9PuM55g">Great America (Trump Super PAC)</a>
+            </p>
+          </div>
+          <div class="logo-byline">
+
+            <p class="byline-text">In collaboration with
+            </p>
+            <div class="byline-logo">
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="second-col">
+          <div class="col-title centered"><span class='bolded'>YouTube Views, by Candidate</span> from <span class='start-date'>09/05</span> - <span class='end-date'>10/05</span>
+          </div>
+          <p class="mobile-zoom-out">ZOOM<br>OUT
+          </p>
+          <div class="map-container">
+            <div class="loading-screen">
+              <p class="loading-text">Loading Data <span class="load-amount">0</span>%
+              </p>
+            </div>
+          </div>
+          <div class="legend-mobile">
+            <div class="state-select">
+
+            </div>
+            <div class="legend-container">
+            </div>
+          </div>
+
+          <div class="primary-container">
+            <p class="primary-container-text">Primary States Outlined in <span class="primary-container-outline">Black</span>
+            </p>
+            <div class="primary-container-states">
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <script src="//d3js.org/d3.v3.min.js"></script>
+    <script src="//d3js.org/queue.v1.min.js"></script>
+    <script src="//d3js.org/topojson.v1.min.js"></script>
+    <script src="election.js"></script>
+  </body>
+</html>
