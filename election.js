@@ -53,14 +53,14 @@ if(viewportWidth<970 && mobile != true){
 
 if(viewportWidth<720 && mobile != true){
 
-  d3.select(".timeline-end").text("SEP")
-  d3.select(".timeline-start").text("NOV")
+  d3.select(".timeline-end").text("OCT")
+  d3.select(".timeline-start").text("JAN")
   sparkLineCount = 55;
 }
 
 if(mobile){
-  d3.select(".timeline-end").text("SEP")
-  d3.select(".timeline-start").text("NOV")
+  d3.select(".timeline-end").text("OCT")
+  d3.select(".timeline-start").text("JAN")
 }
 
 var uploader = "versus";
@@ -228,13 +228,13 @@ function ready(error,
 
     if(allDatesSelected){
   		if(uploader=="Trump"){
-  			thing = [{date:"",agg_views:"2317660",candidate:"Trump",video_shortened_id:"3145"},{date:"",agg_views:"1132277",candidate:"Trump",video_shortened_id:"494"},{date:"",agg_views:"977530",candidate:"Trump",video_shortened_id:"3169"}];
+  			thing = [{date:"",agg_views:"2318032",candidate:"Trump",video_shortened_id:"3290"},{date:"",agg_views:"1438853",candidate:"Trump",video_shortened_id:"2477"},{date:"",agg_views:"1169559",candidate:"Trump",video_shortened_id:"771"}];
   		}
   		else if(uploader=="Clinton"){
-  			thing = [{date:"",agg_views:"3351374",candidate:"Clinton",video_shortened_id:"2381"},{date:"",agg_views:"1304141",candidate:"Clinton",video_shortened_id:"2539"},{date:"",agg_views:"1125930",candidate:"Clinton",video_shortened_id:"2650"}];
+  			thing = [{date:"",agg_views:"3430311",candidate:"Clinton",video_shortened_id:"2469"},{date:"",agg_views:"1575728",candidate:"Clinton",video_shortened_id:"1655"},{date:"",agg_views:"1309171",candidate:"Clinton",video_shortened_id:"2655"}];
   		}
   		else{
-  			thing = [{date:"",agg_views:"3351374",candidate:"Clinton",video_shortened_id:"2381"},{date:"",agg_views:"2317660",candidate:"Trump",video_shortened_id:"3145"},{date:"",agg_views:"1304141",candidate:"Clinton",video_shortened_id:"2539"}];
+  			thing = [{date:"",agg_views:"3430311",candidate:"Clinton",video_shortened_id:"2469"},{date:"",agg_views:"2318032",candidate:"Trump",video_shortened_id:"3290"},{date:"",agg_views:"1575728",candidate:"Clinton",video_shortened_id:"1655"}];
   		}
   	}
 
@@ -323,7 +323,7 @@ function ready(error,
   function firstLoadClean(){
     for (var i = 0, len = firstLoad.length; i < len; i++) {
       var date = parseInt(firstLoad[i].date_id);
-      firstLoad[i].date_id = 20160905;
+      firstLoad[i].date_id = 20160915;
       var candidate = "Clinton"
       if(firstLoad[i].uploader != 1){
         candidate = "Trump";
@@ -525,7 +525,7 @@ function ready(error,
     .style("fill","#F7F7F7")
     ;
 
-  var weekScale = d3.scale.quantize().domain([parseDate("20160101"),parseDate("20161005")]).range(d3.range(sparkLineCount));
+  var weekScale = d3.scale.quantize().domain([parseDate("20160101"),parseDate("20161015")]).range(d3.range(sparkLineCount));
   //alternativeSpark
   var dailyViews = d3.nest()
     .key(function(d){
