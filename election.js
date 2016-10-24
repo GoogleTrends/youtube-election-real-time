@@ -608,8 +608,8 @@ function ready(error,
     endDate = startDate + offSet;
     var startString = JSON.stringify(allDates[startDate]).substring(4);
     var endString = JSON.stringify(allDates[endDate]).substring(4);
-    startTitleDate.text(startString.slice(0,2)+"/"+startString.substring(2));
-    endTitleDate.text(endString.slice(0,2)+"/"+endString.substring(2));
+    startTitleDate.text(startString.slice(0,2)+"/"+startString.substring(2)+"/16");
+    endTitleDate.text(endString.slice(0,2)+"/"+endString.substring(2)+"/16");
 
     gBrush
         .call(brush.extent([startDate, endDate]));
@@ -1418,8 +1418,8 @@ function ready(error,
       var startString = JSON.stringify(allDates[startDate]).substring(4);
       var endString = JSON.stringify(allDates[endDate]).substring(4);
 
-      startTitleDate.text(startString.slice(0,2)+"/"+startString.substring(2));
-      endTitleDate.text(endString.slice(0,2)+"/"+endString.substring(2));
+      startTitleDate.text(startString.slice(0,2)+"/"+startString.substring(2)+"/16");
+      endTitleDate.text(endString.slice(0,2)+"/"+endString.substring(2)+"/16");
 
       if(uploader=="Clinton"||uploader=="Trump"){
         sparkLines.style("background-color",function(d){
@@ -1540,8 +1540,8 @@ function ready(error,
     ;
     var startString = JSON.stringify(allDates[startDate]).substring(4);
     var endString = JSON.stringify(allDates[endDate]).substring(4);
-    startTitleDate.text(startString.slice(0,2)+"/"+startString.substring(2));
-    endTitleDate.text(endString.slice(0,2)+"/"+endString.substring(2));
+    startTitleDate.text(startString.slice(0,2)+"/"+startString.substring(2)+"/16");
+    endTitleDate.text(endString.slice(0,2)+"/"+endString.substring(2)+"/16");
 
   }
   function setupFilters(){
@@ -1595,8 +1595,8 @@ function ready(error,
 
         var startString = JSON.stringify(allDates[startDate]).substring(4);
         var endString = JSON.stringify(allDates[endDate]).substring(4);
-        startTitleDate.text(startString.slice(0,2)+"/"+startString.substring(2));
-        endTitleDate.text(endString.slice(0,2)+"/"+endString.substring(2));
+        startTitleDate.text(startString.slice(0,2)+"/"+startString.substring(2)+"/16");
+        endTitleDate.text(endString.slice(0,2)+"/"+endString.substring(2)+"/16");
 
         if(uploader=="Clinton"||uploader=="Trump"){
 
@@ -1652,8 +1652,8 @@ function ready(error,
       endDate = allDates.length - 1;
       var startString = JSON.stringify(allDates[startDate]).substring(4);
       var endString = JSON.stringify(allDates[endDate]).substring(4);
-      startTitleDate.text(startString.slice(0,2)+"/"+startString.substring(2));
-      endTitleDate.text(endString.slice(0,2)+"/"+endString.substring(2));
+      startTitleDate.text(startString.slice(0,2)+"/"+startString.substring(2)+"/16");
+      endTitleDate.text(endString.slice(0,2)+"/"+endString.substring(2)+"/16");
 
       // buildSpark();
       d3.selectAll(".spark-item").style("background-color",null);
