@@ -228,13 +228,13 @@ function ready(error,
 
     if(allDatesSelected){
   		if(uploader=="Trump"){
-  			thing = [{date:"",agg_views:"2318032",candidate:"Trump",video_shortened_id:"3290"},{date:"",agg_views:"1438853",candidate:"Trump",video_shortened_id:"2477"},{date:"",agg_views:"1169559",candidate:"Trump",video_shortened_id:"771"}];
+  			thing = [{date:"",agg_views:"2318642",candidate:"Trump",video_shortened_id:"3530"},{date:"",agg_views:"1481419",candidate:"Trump",video_shortened_id:"2654"},{date:"",agg_views:"1228576",candidate:"Trump",video_shortened_id:"681"}];
   		}
   		else if(uploader=="Clinton"){
-  			thing = [{date:"",agg_views:"3430311",candidate:"Clinton",video_shortened_id:"2469"},{date:"",agg_views:"1575728",candidate:"Clinton",video_shortened_id:"1655"},{date:"",agg_views:"1309171",candidate:"Clinton",video_shortened_id:"2655"}];
+  			thing = [{date:"",agg_views:"3575632",candidate:"Clinton",video_shortened_id:"2647"},{date:"",agg_views:"1797803",candidate:"Clinton",video_shortened_id:"1775"},{date:"",agg_views:"1337315",candidate:"Clinton",video_shortened_id:"2974"}];
   		}
   		else{
-  			thing = [{date:"",agg_views:"3430311",candidate:"Clinton",video_shortened_id:"2469"},{date:"",agg_views:"2318032",candidate:"Trump",video_shortened_id:"3290"},{date:"",agg_views:"1575728",candidate:"Clinton",video_shortened_id:"1655"}];
+  			thing = [{date:"",agg_views:"3575632",candidate:"Clinton",video_shortened_id:"2647"},{date:"",agg_views:"2318642",candidate:"Trump",video_shortened_id:"3530"},{date:"",agg_views:"1797803",candidate:"Clinton",video_shortened_id:"1775"}];
   		}
   	}
 
@@ -323,7 +323,7 @@ function ready(error,
   function firstLoadClean(){
     for (var i = 0, len = firstLoad.length; i < len; i++) {
       var date = parseInt(firstLoad[i].date_id);
-      firstLoad[i].date_id = 20160915;
+      firstLoad[i].date_id = 20161006;
       var candidate = "Clinton"
       if(firstLoad[i].uploader != 1){
         candidate = "Trump";
@@ -525,7 +525,7 @@ function ready(error,
     .style("fill","#F7F7F7")
     ;
 
-  var weekScale = d3.scale.quantize().domain([parseDate("20160101"),parseDate("20161015")]).range(d3.range(sparkLineCount));
+  var weekScale = d3.scale.quantize().domain([parseDate("20160101"),parseDate("20161105")]).range(d3.range(sparkLineCount));
   //alternativeSpark
   var dailyViews = d3.nest()
     .key(function(d){
